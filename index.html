@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>neurocl</title>
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/night.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>neurocl</h1>
+					<h3><a>Neural Network C++ implementation</a></h3>
+					<iframe data-src="http://blackccpie.free.fr/nets/neurocl-web.png"
+								width="50%" height="250px"  frameborder="0" marginwidth="0" align="middle"
+								marginheight="0" scrolling="no" style="border:none; margin-bottom:5px; max-width: 100%;" allowfullscreen>
+					</iframe>
+				</section>
+				<section>
+					<h2>Intro</h2>
+					<p align="left">
+						<ul>
+							<li>Neurocl = <a><b>Neuro</b> <b>C</b>omputing <b>L</b>ibrary)</a></li>
+							<li>meant to experiment various 'from scratch' implementations of neural network layer schemes</li>
+							<li>focuses on matrix expression of feed forward/backward propagation steps</li>
+							<li>implements Multi-Layer Perceptron (<a>MLP</a>) scheme, as well as Convolutional Neural Network (<a>CONVNET</a>) scheme</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<section>
+						<h2><b>MLP</b> Implementations</h2>
+						<p align="left">
+							There are two different <a>MLP</a> implementations in Neurocl :
+							<ul>
+								<li>one using standard Boost.ublas containers</li>
+								<li>one based on VexCL containers</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h2><b>CONVNET</b> Implementations</h2>
+						<p align="left">
+							There is only one <a>CONVNET</a> implementation for now, based on a tensor abstraction class, using Boost.ublas containers.
+						</p>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'reveal.js/plugin/markdown/marked.js' },
+					{ src: 'reveal.js/plugin/markdown/markdown.js' },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
